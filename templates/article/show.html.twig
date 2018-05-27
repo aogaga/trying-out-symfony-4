@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% block title %} Read My Blog {% endblock %}
+{% block body %}
+<h1>{{ title }}</h1>
+
+<div>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugiat fugit perspiciatis provident quas similique temporibus vel? Ducimus eveniet labore natus! Amet dolorem, dolorum in inventore molestiae quaerat ratione suscipit.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consequuntur cum dignissimos eaque esse hic, inventore iste laudantium minima molestias nam nisi, odio qui ratione sapiente tempore vel. Ex, omnis.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus accusantium asperiores, consectetur debitis doloremque ducimus fugit in iusto libero, neque officia perspiciatis saepe suscipit ut? Dolores expedita, ipsum? Quis.
+    </p>
+</div>
+
+
+<h2> Comments({{ comments | length }})</h2>
+
+    <ul class="list-group">
+    {% for comment in comments %}
+    <li class="list-group-item">{{ comment }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
